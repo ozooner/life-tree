@@ -102,7 +102,7 @@ life.commit({
 });
 var uni = gitgraph.branch({column: 1, name: "university", color: colors.uni, commitDefaultOptions: {color: colors.uni}});
 uni.commit({
-  sha1: "01.09.1998",
+  sha1: "01.09.2009",
   message: "Create branch 'Business Academy Aarhus' in Denmark"
 });
 uni.commit({
@@ -121,7 +121,7 @@ var telema = gitgraph.branch({parentBranch: uni, name: "telema", column: 2, colo
 telema.commit({
   sha1: "02.06.2012",
   message: "Internship at Telema in Estonia (Java developer)",
-  detailId: "telema"
+  //detailId: "telema"
 });
 telema.commit({
   sha1: "28.11.2012",
