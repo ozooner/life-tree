@@ -285,7 +285,7 @@ play.commit({
 var taltech = gitgraph.branch({parentBranch: life, name: "taltech", column: 1, color: colors.taltech, commitDefaultOptions: {color: colors.taltech}});
 taltech.commit({
   sha1: "03.09.2019",
-  message: "Financial analysis course in Tallinn Technical University (TalTech)"
+  message: "Financial analysis course in TalTech"
 });
 
 taltech.merge(life, { sha1: "26.11.2019", message: "Financial analasys course passed with 95%"});
