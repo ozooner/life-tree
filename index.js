@@ -46,6 +46,8 @@ var colors = {
   //fadeit: '#586e75',
   talents: '#f1c109',
   army: '#859900',
+  play: '#00aeef',
+  taltech: '#e4067e',
 }
 
 var life = gitgraph.branch({column: 0, name: "life", color: colors.life, commitDefaultOptions: {color: colors.life}});
@@ -219,7 +221,7 @@ life.commit({
 
 fadeit.commit({
   sha1: "20.12.2014",
-  message: "Developed hopper.dk (Flask, Angular, Postgres, Grunt, NGINX)"
+  message: "Developed hopper.dk as in-house project (Flask, Angular, Postgres, Grunt, NGINX)"
 });
 
 fadeit.commit({
@@ -232,12 +234,20 @@ fadeit.commit({
   message: "Developed my.airgate.dk (Express, React, Mysql, Webpack)"
 });
 
+
 fadeit.commit({
   sha1: "18.05.2015",
-  message: "Developing playsignage.com (Flask, Angular, Postgres, Gulp, NGINX, Cordova)"//chrome extension
+  message: "Developing playsignage.com as in-house project (Flask, Angular, Postgres, Gulp, NGINX, Cordova)"//chrome extension
 });
 
-var army = gitgraph.branch({name: "military", column: 1, color: colors.army, commitDefaultOptions: {color: colors.army}});
+var play = gitgraph.branch({parentBranch: fadeit, name: "play", column: 2, color: colors.play, commitDefaultOptions: {color: colors.play}});
+
+play.commit({
+  sha1: "20.03.2016",
+  message: "Play Digital Signage has outgrown fadeit"
+});
+
+var army = gitgraph.branch({parentBranch: life, name: "military", column: 1, color: colors.army, commitDefaultOptions: {color: colors.army}});
 
 army.commit({
   sha1: "05.07.2016",
@@ -261,14 +271,47 @@ army.commit({
 
 army.merge(life, { sha1: "31.05.2017", message: "11 month conscription finished", tag: "v1.1.0"});
 
+
 life.commit({
   sha1: "13.07.2017",
   message: "Switched to Arch Linux from Kubuntu"
 });
 
-fadeit.commit({
+play.commit({
   sha1: "24.09.2017",
-  message: "Developed desktop applications (Windows/OSX) for PlaySignage using Electron"
+  message: "Desktop applications (Windows/OSX/Linux) for PlaySignage using Electron"
+});
+
+var taltech = gitgraph.branch({parentBranch: life, name: "taltech", column: 1, color: colors.taltech, commitDefaultOptions: {color: colors.taltech}});
+taltech.commit({
+  sha1: "03.09.2019",
+  message: "Financial analysis course in Tallinn Technical University (TalTech)"
+});
+
+taltech.merge(life, { sha1: "26.11.2019", message: "Financial analasys course passed with 95%"});
+
+
+play.commit({
+  sha1: "15.11.2019",
+  message: "Geo-scaling PlaySignage to US and EU server clusters"
+});
+
+play.commit({
+  sha1: "03.07.2020",
+  message: "Rolled out Progressive Web Apps of web player and web portal"
+});
+
+var taltech = gitgraph.branch({parentBranch: life, name: "taltech", column: 1, color: colors.taltech, commitDefaultOptions: {color: colors.taltech}});
+taltech.commit({
+  sha1: "15.09.2020",
+  message: "Tax laws and accounting course at TalTech"
+});
+
+taltech.merge(life, { sha1: "20.11.20", message: "Tax laws and accounting course passed with 86%"});
+
+play.commit({
+  sha1: "06.01.2021",
+  message: "Developed player app for Samsung Tizen operating system"
 });
 
 
