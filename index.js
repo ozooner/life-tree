@@ -314,8 +314,17 @@ play.commit({
   message: "Developed player app for Samsung Tizen operating system"
 });
 
+play.commit({
+  sha1: "17.10.2023",
+  message: "Developed player app for LG TV's on WebOS operating system"
+});
 
+play.commit({
+  sha1: "23.01.2024",
+  message: "Developed player app BrightSign operating system"
+});
 
-//nosql dbs (couch/mongo) / coffeescript, socket.io, reactjs application (airgate), html5 canvas, playsignage.com (chrome extension, android app with cordova), digitrans
-//military: soldier basic course, sergeant, radio equipment, networking, security, openlayers
-//JS build processes, electron app
+play.commit({
+  sha1: "23.04.2024",
+  message: "New playsignage.com website with Strapi CMS, Next.js, React and Cloudflare Pages"
+});
