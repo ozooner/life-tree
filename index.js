@@ -242,6 +242,11 @@ fadeit.commit({
 
 var play = gitgraph.branch({parentBranch: fadeit, name: "play", column: 2, color: colors.play, commitDefaultOptions: {color: colors.play}});
 
+life.commit({
+  sha1: "06.09.2015",
+  message: "Participated in TransferWise fintech hackaton"
+});
+
 play.commit({
   sha1: "20.03.2016",
   message: "Play Digital Signage has outgrown fadeit"
@@ -312,6 +317,16 @@ taltech.merge(life, { sha1: "20.11.20", message: "Tax laws and accounting course
 play.commit({
   sha1: "06.01.2021",
   message: "Developed player app for Samsung Tizen operating system"
+});
+
+life.commit({
+  sha1: "17.03.2022",
+  message: "Switched to OSX"
+});
+
+life.commit({
+  sha1: "06.09.2022",
+  message: "Participated in Garage 48 - Digital Construction Hackaton"
 });
 
 play.commit({
