@@ -34,6 +34,7 @@ var gitgraph = new GitGraph({
   //} 
   author: ""
 });
+gitgraph.template.commit.widthExtension = 200;
 
 var colors = {
   life: '#2aa198',
