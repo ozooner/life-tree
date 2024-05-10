@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandri sünna</title>
+    <style>
+        body {
+            background: white;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            position: absolute;
+            z-index: 1;
+            animation: showImage 3s linear infinite;
+        }
+        h3 {
+            color: white;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            font-size: 3em;
+        }
+        @keyframes showImage {
+            0% {
+                transform: scale(0) rotate(0deg);
+            }
+            25% {
+                transform: scale(1) rotate(90deg);
+            }
+            50% {
+                transform: scale(2) rotate(180deg);
+            }
+            75% {
+                transform: scale(1) rotate(270deg);
+            }
+            100% {
+                transform: scale(0) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h3>minu sünniaasta + sünnikuu - sünnikuupäev - √9</h3>
+    <img src="lukk.jpg" alt="lukk">
+</body>
+</html>
